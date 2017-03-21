@@ -1,0 +1,17 @@
+/*------------- HEADER --------------*/
+
+.navbar{
+    background-color: #a61c1c;
+}
+
+/*Color de les lletres del header i footer*/
+.navbar-default .navbar-brand{
+    color: #ffffff;
+}
+
+/*------------- MENU LATERAL --------------*/
+a li .navbar-default .navbar-nav{
+    color: #ffffff;
+}
+
+/*------------- FOOTER --------------*/
