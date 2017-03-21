@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->foreign('main_image')->references('id')->on('images');
             $table->integer('stock');
             $table->text('description');
-            $table->integer('category_id');
+            $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
         });
     }
