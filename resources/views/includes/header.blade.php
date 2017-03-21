@@ -15,10 +15,10 @@
                     <a href="">Ranking</a>
                 </li>
                 <li>
-                    <a href="{{ route('perfil') }}">Perfil</a>
+                    <a href="">Perfil</a>
                 </li>                
                 <li>
-                    <a href="{{ route('logout') }}">Logout</a>
+                    <a href="">Logout</a>
                 </li>
             </ul>
 
