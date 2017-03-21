@@ -15,8 +15,8 @@ class CreateAuctionsTable extends Migration
     {
         Schema::create('auctions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('dni');
-            $table->foreign('dni')->references('dni')->on('users');
+            $table->integer('dni')->unsigned();
+            $table->foreign('dni')->references('id')->on('users');
             $table->integer('product_id');
             $table->foreign('product_id')->references('id')->on('products');
             $table->text('description');
