@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('bank_data');
             $table->string('rupias');
             $table->string('phone');
-            $table->integer('rol');
+            $table->integer('rol')->unsigned();
             $table->foreign('rol')->references('id')->on('roles');
             $table->string('password');
             $table->rememberToken();
