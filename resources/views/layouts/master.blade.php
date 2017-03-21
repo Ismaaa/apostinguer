@@ -7,8 +7,8 @@
     </head>
     <body>
         @include('includes.header')
-        <div class="container">
-            @yield('content')
+        <div class="menulateral">
+            @include('includes.menulateral')
         </div>
     </body>
     <footer>
