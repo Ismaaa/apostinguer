@@ -15,8 +15,8 @@ class CreateBetsTable extends Migration
     {
         Schema::create('bets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('dni');
-            $table->foreign('dni')->references('dni')->on('users');
+            $table->integer('dni')->unsigned();
+            $table->foreign('dni')->references('id')->on('users');
             $table->date('date');
             $table->integer('total_bets');
         });
