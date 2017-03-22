@@ -1,72 +1,55 @@
-<div class="row">
-  <div class="col-sm-3">
-    <div class="sidebar-nav">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+<nav class="navbar navbar-inverse" style="background-color: #314761;">
+    
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menulateral">
+
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
+            <span class="icon-bar"></span>                     
+          </button>
+
+        <div class="collapse navbar-collapse" id="menulateral">
             
-          <span class="visible-xs navbar-brand">Sidebar menu</span>
-        </div>
-          
-        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" alt="Generic placeholder image" height="100" width="100">    
+            <div class="infouser">
+                <h5>Nom Usuari</h5>
+                <p><a href="#">Coins: <span class="label label-primary">1234</span></a></p>
+                <p><a href="#">Apostes en curs: <span class="label label-primary">1234</span></a></p>
+                <p><a href="#">Coins en joc: <span class="label label-primary">1234</span></a></p>
+            </div>
+            <div class="buttonrecarregar">
+                <button type="button" class="btn btn-warning">Recarrega coins</button>
+            </div>
+
+            <!---- SEPARACIO ----->
+            <hr class="divider">    
             
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">Menu Item 1 <span class="badge">5</span></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <h4>Categories</h4>
                 </li>
-                
-                <li>
-                    <a href="#">Menu Item 2 <span class="badge">15</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tots <span class="badge">5</span></a>
                 </li>
-                
-                <li>
-                    <a href="#">Menu Item 3 <span class="badge">25</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Informàtica <span class="badge">5</span></a>
                 </li>
-                
-                <li>
-                    <a href="#">Menu Item 4 <span class="badge">25</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fotografia <span class="badge">5</span></a>
                 </li>
-                
-                <li>
-                    <a href="#">Menu Item 5 <span class="badge">25</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Consoles i jocs <span class="badge">5</span></a>
                 </li>
-                
-                <li>
-                    <a href="#">Menu Item 6 <span class="badge">25</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Telefonia <span class="badge">5</span></a>
                 </li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Grans electro. <span class="badge">5</span></a>
                 </li>
-                
-                
-                <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Petits electro. <span class="badge">5</span></a>
+                </li>
             </ul>
-        
-          </div><!--/.nav-collapse -->
-      </div>
+        </nav>
     </div>
-  </div>
-  
-    <div class="col-sm-9">
-        Main content goes here
-        <div class="container">
-            @yield('content')
-        </div>
-  </div>
-</div>
+</nav>
