@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#">Apostinger</a>
+            <a class="navbar-brand" href="principal">Apostinger</a>
             
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header">
                 <span class="icon-bar"></span>
