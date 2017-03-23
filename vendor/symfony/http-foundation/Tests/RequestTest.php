@@ -325,23 +325,6 @@ class RequestTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    /**
-     * @dataProvider getFormatToMimeTypeMapProvider
-     */
-    public function testGetMimeTypesFromFormat($format, $mimeTypes)
-    {
-        if (null !== $format) {
-            $this->assertEquals($mimeTypes, Request::getMimeTypes($format));
-        }
-    }
-
-    public function testGetMimeTypesFromInexistentFormat()
-    {
-        $request = new Request();
-        $this->assertNull($request->getMimeType('foo'));
-        $this->assertEquals(array(), Request::getMimeTypes('foo'));
-    }
-
     public function testGetFormatWithCustomMimeType()
     {
         $request = new Request();
@@ -1059,16 +1042,8 @@ class RequestTest extends \PHPUnit_Framework_TestCase
         $req->getContent($second);
     }
 
-    public function getContentCantBeCalledTwiceWithResourcesProvider()
-    {
-        return array(
-            'Resource then fetch' => array(true, false),
-            'Resource then resource' => array(true, true),
-        );
-    }
-
     /**
-     * @dataProvider getContentCanBeCalledTwiceWithResourcesProvider
+     * @dataProvider getContentCantBeCalledTwiceWithResourcesProvider
      * @requires PHP 5.6
      */
     public function testGetContentCanBeCalledTwiceWithResources($first, $second)
@@ -1085,14 +1060,12 @@ class RequestTest extends \PHPUnit_Framework_TestCase
             $b = stream_get_contents($b);
         }
 
-        $this->assertSame($a, $b);
+        $this->assertEquals($a, $b);
     }
 
-    public function getContentCanBeCalledTwiceWithResourcesProvider()
+    public function getContentCantBeCalledTwiceWithResourcesProvider()
     {
         return array(
-            'Fetch then fetch' => array(false, false),
-            'Fetch then resource' => array(false, true),
             'Resource then fetch' => array(true, false),
             'Resource then resource' => array(true, true),
         );
@@ -1107,6 +1080,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
             array('put'),
             array('delete'),
             array('patch'),
+
         );
     }
 
@@ -1962,39 +1936,13 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider methodIdempotentProvider
-     */
-    public function testMethodIdempotent($method, $idempotent)
-    {
-        $request = new Request();
-        $request->setMethod($method);
-        $this->assertEquals($idempotent, $request->isMethodIdempotent());
-    }
-
-    public function methodIdempotentProvider()
-    {
-        return array(
-            array('HEAD', true),
-            array('GET', true),
-            array('POST', false),
-            array('PUT', true),
-            array('PATCH', false),
-            array('DELETE', true),
-            array('PURGE', true),
-            array('OPTIONS', true),
-            array('TRACE', true),
-            array('CONNECT', false),
-        );
-    }
-
-    /**
      * @dataProvider methodSafeProvider
      */
     public function testMethodSafe($method, $safe)
     {
         $request = new Request();
         $request->setMethod($method);
-        $this->assertEquals($safe, $request->isMethodSafe(false));
+        $this->assertEquals($safe, $request->isMethodSafe());
     }
 
     public function methodSafeProvider()
@@ -2009,43 +1957,6 @@ class RequestTest extends \PHPUnit_Framework_TestCase
             array('PURGE', false),
             array('OPTIONS', true),
             array('TRACE', true),
-            array('CONNECT', false),
-        );
-    }
-
-    /**
-     * @group legacy
-     * @expectedDeprecation Checking only for cacheable HTTP methods with Symfony\Component\HttpFoundation\Request::isMethodSafe() is deprecated since version 3.2 and will throw an exception in 4.0. Disable checking only for cacheable methods by calling the method with `false` as first argument or use the Request::isMethodCacheable() instead.
-     */
-    public function testMethodSafeChecksCacheable()
-    {
-        $request = new Request();
-        $request->setMethod('OPTIONS');
-        $this->assertFalse($request->isMethodSafe());
-    }
-
-    /**
-     * @dataProvider methodCacheableProvider
-     */
-    public function testMethodCacheable($method, $chacheable)
-    {
-        $request = new Request();
-        $request->setMethod($method);
-        $this->assertEquals($chacheable, $request->isMethodCacheable());
-    }
-
-    public function methodCacheableProvider()
-    {
-        return array(
-            array('HEAD', true),
-            array('GET', true),
-            array('POST', false),
-            array('PUT', false),
-            array('PATCH', false),
-            array('DELETE', false),
-            array('PURGE', false),
-            array('OPTIONS', false),
-            array('TRACE', false),
             array('CONNECT', false),
         );
     }

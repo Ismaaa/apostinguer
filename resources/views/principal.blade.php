@@ -21,7 +21,7 @@
         </header>
         
         @include('includes.centreinici')
-        <img src="http://localhost:8888/apostinguer/public/images/portada.png">
+        <img src="images/portada.png">
     </body>
     
     <footer class="container-fluid text-right">
