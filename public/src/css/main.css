@@ -1,0 +1,102 @@
+h1{
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+h2,h3,h4,h5,h6{
+    color: #fff;
+}
+
+/*------------- HEADER --------------*/
+.navbar-inverse{
+    background-color: #a61c1c;
+}
+
+.navbar-header .navbar-brand{
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #831616; /*color clar 991a1a*/
+}
+
+/*------------- MENU LATERAL --------------*/
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-color: #314761;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #314761;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+a{
+    color: white;    
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar Styles */
+.infouser{
+    text-align: left;
+}
+
+.buttonrecarregar{
+    padding-top: 20px;
+}
+
+.sidebar-nav li {
+    line-height: 30px;
+    text-align: left;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav {    
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*------------- ADDS --------------*/
+.gif{
+    width: 100%;
+}
+
+
+/*------------- FOOTER --------------*/
+footer{
+    background-color: #314761;
+}
+
+.navbar-brand{
+    color: #fff;
+}

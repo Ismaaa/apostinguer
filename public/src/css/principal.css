@@ -1,0 +1,73 @@
+h1{
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+h2,h3,h4,h5,h6{
+    color: #fff;
+}
+
+img{
+   width: 100%;    
+}
+
+/*------------- HEADER --------------*/
+.headerinici{
+    position: absolute;
+    width: 100%;    
+}
+
+.navbar-inverse{
+    background-color: rgba(255,255,255,0.0);
+    border-color: rgba(255,255,255,0.0);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: rgba(255,255,255,0.0);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: #ffaa00;
+}
+
+/*------------- CENTRE --------------*/
+
+.registrar{
+    position: absolute;
+    margin-top: 34%;
+    margin-left: 50%;
+}
+
+button .boto{
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 200%;
+}
+
+.btn-warning {
+    background-color: #ffbb00;
+    border-color: #ffaa00;
+}
+
+.inciarsessio{   
+    font-style: oblique;
+    position: absolute;
+    margin-top: 42%;
+    margin-left: 38%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #ffaa00;
+}
